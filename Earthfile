@@ -7,6 +7,7 @@ build:
 
     ARG VERSION=v1.0.8
 
+    RUN git config --global advice.detachedHead false
     RUN git clone https://github.com/bitnami/wait-for-port.git
     WORKDIR wait-for-port
     RUN git checkout ${VERSION}
