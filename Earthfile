@@ -3,9 +3,9 @@ VERSION 0.8
 build:
     FROM golang:1.24.1
 
-    ARG VERSION=v1.0.8
-
     RUN apt-get update && apt-get install -y --no-install-recommends musl-dev musl-tools
+
+    ARG VERSION=v1.0.8
 
     RUN git clone https://github.com/bitnami/wait-for-port.git
     WORKDIR wait-for-port
